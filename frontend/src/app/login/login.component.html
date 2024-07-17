@@ -1,0 +1,30 @@
+<div>
+    <div class="row justify-content-center">
+        <div class="col-md-5 py-3">
+            <div class="container py-5 my-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../../assets/login.png" width="200rem" style="margin-bottom: 12px;" alt="">
+                    </div>
+                </div>
+                <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+                    <mat-form-field class="example-full-width txtLogin">
+                        <mat-label>Email</mat-label>
+                        <input type="email" formControlName="email" matInput placeholder="pat@example.com">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width txtLogin">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput formControlName="pwd" [type]="hide() ? 'password' : 'text'" />
+                        <button mat-icon-button matSuffix (click)="clickEvent($event)"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <p>
+                        <button mat-stroked-button type="submit" class="btnLogin">Login</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

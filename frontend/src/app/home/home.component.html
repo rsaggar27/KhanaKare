@@ -1,0 +1,25 @@
+
+<div style="background-image: url('../../assets/homeBg.png'); min-height: 100vh; background-size: cover;">
+    <div class="row">
+        <div class="col text-end py-5 my-3 px-3 mx-5">
+            <button mat-mini-fab [matMenuTriggerFor]="menu" class="bg-light">
+                <mat-icon class="text-dark">menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/login/Student">Student</button>
+                <button mat-menu-item routerLink="/login/Mess">Mess</button>
+                <button mat-menu-item routerLink="/login/Admin">Admin</button>
+            </mat-menu>
+        </div>
+    </div>
+    <div class="row h-100">
+        <div class="col mx-3">
+            <p style="position: absolute; bottom:40vh">
+                <span class="align-text-bottom land-text"  style="font-size: 10rem;">Wholesome</span>
+        </p>
+        <p style="position: absolute; bottom: 20vh;">
+            <span class="align-text-bottom land-text" style="font-size: 10rem;">goodness is here</span>
+        </p>
+        </div>
+    </div>
+</div>
