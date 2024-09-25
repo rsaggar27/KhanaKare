@@ -1,0 +1,25 @@
+//
+
+
+m1
+m2
+m3
+m4
+- 28
+
+()
+  [
+  {day:mon,time:'
+  br',meal:m1}
+  {day:mon,time:'l',meal:m1}
+  {day:mon,time:'s',meal:m1}
+  {day:mon,time:'d',meal:m1}
+  
+  {day:mon,time:'br',meal:m1}
+  {day:mon,time:'l',meal:m1}
+  {day:mon,time:'s',meal:m1}
+  {day:mon,time:'d',meal:m1}
+  ...
+
+  ]
+

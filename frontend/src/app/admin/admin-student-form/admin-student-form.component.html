@@ -1,1 +1,112 @@
-<p>admin-student-form works!</p>
+<div class="container py-5 ">
+    <div class="m-4 w-75 mx-auto">
+        <div class="text-center">
+            <img src="../../../assets/StudentForm.png" class="w-75" alt="Heading">
+        </div>
+        <form [formGroup]="studentGroup" (ngSubmit)="doEnroll()">
+            <div class="row pt-5">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtName" placeholder="Name" formControlName="name">
+                        <label for="txtName">Name</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtSid" placeholder="SID" formControlName="sid">
+                        <label for="txtSid">SID</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-floating mb-3">
+
+                        <select class="form-select" formControlName="branch" id="selectBranch" aria-label="Floating label select example">
+                            <option value="select" selected disabled>Select</option>
+                            <option value="Aerospace Engineering">Aerospace Engineering</option>
+                            <option value="Civil Engineering">Civil Engineering</option>
+                            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                            <option value="Computer Science and Engineering(Data Science)">Computer Science and
+                                Engineering(Data Science)</option>
+                            <option value="Computer Science and Engineering(AI)">Computer Science and Engineering(AI)
+                            </option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="Electronics and Communication Engineering">Electronics and Communication
+                                Engineering</option>
+                            <option value="Electronics and Communication Engineering(VLSI)">Electronics and
+                                Communication Engineering(VLSI)</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Materials and Metallurgical Engineering">Materials and Metallurgical
+                                Engineering</option>
+                            <option value="Production and Industrial Engineering">Production and Industrial Engineering
+                            </option>
+                        </select>
+                        <label for="floatingSelect">Branch</label>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="selectHostel" formControlName="hostel"
+                            aria-label="Floating label select example" (click)="fetchHostel()">
+                            <option value="select" selected disabled>Select</option>
+                            @for (x of hostels; track $index) {
+                            <option value="{{x.name}}">{{x.name}}</option>
+                            }
+                        </select>
+                        <label for="floatingSelect">Hostel</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 ">
+                        <input type="email" class="form-control" id="txtEmail" formControlName="emailid"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">Email</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtPhone" formControlName="cnumber"
+                            placeholder="Password">
+                        <label for="txtPhone">Phone Number</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group form-floating mb-3">
+                        <input type="{{showPassword ? 'text' : 'password'}}" class="form-control"  formControlName="password"
+                            id="txtPwd" placeholder="name@example.com">
+                        <span (click)="togglePassword()" class="input-group-text">
+                            @if (showPassword) {
+                            <i class="fa-solid fa-eye"></i>
+                            }
+                            @else {
+                            <i class="fa-solid fa-eye-slash"></i>
+                            }
+                        </span>
+                        <label for="txtPwd">Password</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6" style="padding-top: 10px;">
+                    <button class="btn text-center"
+                        style=" background: gray; border-radius: 50px; border-color: #fff; color: #fff;"
+                        (click)="generatePass()">
+                        Generate Password
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center pt-2">
+                <button   class="btn btn-danger" style="line-height: 2rem; width:10rem; border-radius: 50px;"
+                    type="submit" [disabled]="!studentGroup.valid">Enroll</button>
+            </div>
+        </form>
+    </div>
+</div>

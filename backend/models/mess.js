@@ -9,6 +9,6 @@ const messSchema =new Schema({
     cnumber:{type:String,required:[true,"fill the number"]},
     ownership:{type:String,required:[true,"fill the ownership"]}, //combo
     hostel:{type:String,required:[true,"fill the hostel"]}, //combo
+    status:{type:Number}
 })
-
 module.exports=mongoose.model('Mess',messSchema);

@@ -1,1 +1,140 @@
-<p>admin-student works!</p>
+<div class="container py-5 ">
+
+    <div class="text-center">
+        <img src="../../../assets/StudentForm.png" class="w-75" alt="HEading">
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped py-5 my-5">
+            <thead>
+                <tr>
+                    <th>SID</th>
+                    <th>Name</th>
+                    <th>Email Id</th>
+                    <th>Phone</th>
+                    <th>Branch</th>
+                    <th>Hostel</th>
+                    <th>Mess</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students">
+                    <td>{{student.sid}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.emailid}}</td>
+                    <td>{{student.cnumber}}</td>
+                    <td>{{student.branch}}</td>
+                    <td>{{student.hostel}}</td>
+                    <td>{{student.mess}}</td>
+                    <td><button (click)="statusChange(student._id,student.status)">{{student.status}}</button></td>
+                    <td><i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#updateModal"
+                            (click)="fetchStudentbyId(student._id)"></i></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="text-center">
+                            <img src="../../../assets/StudentForm.png" class="w-75" alt="HEading">
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form [formGroup]="studentGroup">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="txtName" placeholder="name"
+                                            formControlName="name">
+                                        <label for="floatingInput">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="txtSid" placeholder="12345678"
+                                            formControlName="sid">
+                                        <label for="floatingPassword">Sid</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            formControlName="emailid" placeholder="name@example.com">
+                                        <label for="floatingInput">Email address</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput"
+                                            formControlName="cnumber" placeholder="name@example.com">
+                                        <label for="floatingInput">Phone Number</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+
+                                        <select class="form-select" formControlName="branch" id="selectBranch"
+                                            aria-label="Floating label select example">
+                                            <option value="select" selected disabled>Select</option>
+                                            <option value="Aerospace Engineering">Aerospace Engineering</option>
+                                            <option value="Civil Engineering">Civil Engineering</option>
+                                            <option value="Computer Science and Engineering">Computer Science and
+                                                Engineering</option>
+                                            <option value="Computer Science and Engineering(Data Science)">Computer
+                                                Science
+                                                and
+                                                Engineering(Data Science)</option>
+                                            <option value="Computer Science and Engineering(AI)">Computer Science and
+                                                Engineering(AI)
+                                            </option>
+                                            <option value="Electrical Engineering">Electrical Engineering</option>
+                                            <option value="Electronics and Communication Engineering">Electronics and
+                                                Communication
+                                                Engineering</option>
+                                            <option value="Electronics and Communication Engineering(VLSI)">Electronics
+                                                and
+                                                Communication Engineering(VLSI)</option>
+                                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                            <option value="Materials and Metallurgical Engineering">Materials and
+                                                Metallurgical
+                                                Engineering</option>
+                                            <option value="Production and Industrial Engineering">Production and
+                                                Industrial
+                                                Engineering
+                                            </option>
+                                        </select>
+                                        <label for="floatingSelect">Branch</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" id="selectHostel" formControlName="hostel"
+                                            aria-label="Floating label select example" (click)="fetchHostel()">
+                                            <option value="select" selected disabled>Select</option>
+                                            @for (x of hostels; track $index) {
+                                            <option value="{{x.name}}">{{x.name}}</option>
+                                            }
+                                        </select>
+                                        <label for="floatingSelect">Hostel</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" (click)="upadateStudent()" data-bs-dismiss="modal">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

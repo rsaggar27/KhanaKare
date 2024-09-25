@@ -57,12 +57,20 @@ route: ActivatedRoute = inject(ActivatedRoute)
       // console.log("in the fn")
       this.master.doLoginMess(data).subscribe((resp)=>{
         console.log(resp);
+        if(resp.response=='success' ){
+          localStorage.setItem('userId',resp.userId)
+          this.router.navigate(['/mess/dash']);
+        }
       });
     } 
 
     if(this.id=="Admin"){
       this.master.doLoginAdmin(data).subscribe((resp)=>{
         console.log(resp);
+        if(resp.response=='success' ){
+          localStorage.setItem('userId',resp.userId)
+          this.router.navigate(['/admin/dash']);
+        }
       })
     }
   }

@@ -10,10 +10,12 @@ async function main() {
 
 
 router.post('/',(req,res)=>{
+    
     let b=req.body;
+    console.log(b);
     let data={
-        name:b.name,
-        type:b.type
+        name:b.hostelName,
+        type:b.hostelType
     }
     let hostel =new Hostel(data);
 
@@ -37,7 +39,15 @@ router.get('/',(req,res)=>{
     })
 });
 
-
+router.delete('/:id',(req,resp)=>{
+    let id=req.params.id;
+    Hostel.deleteOne({_id:id }).then((respJson,err)=>{
+        if(err!=null){
+            resp.send(err.message);
+        }
+        resp.send({resp:"success"});
+    })
+})
 
 module.exports=router;
 

@@ -28,7 +28,8 @@ router.post('/sign-up',(req,res)=>{
 
 router.post('/login',(req,res)=>{
 
-    Admin.find({emailid:req.body.emailid, password:req.body.password}).then((respJson,err)=>{
+    Admin.find({emailid:req.body.email, password:req.body.pwd}).then((respJson,err)=>{
+        console.log(req.body);
         if(err!=null)
         res.send(err.message);
     
