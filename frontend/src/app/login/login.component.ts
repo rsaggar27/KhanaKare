@@ -47,7 +47,7 @@ route: ActivatedRoute = inject(ActivatedRoute)
       this.master.doLoginStudent(data).subscribe((resp)=>{
         console.log(resp);
         if(resp.response=='success' ){
-          localStorage.setItem('userId',resp.userId)
+          localStorage.setItem('userSid',resp.userId)
           this.router.navigate(['/student/dash']);
         }
       });
@@ -58,7 +58,7 @@ route: ActivatedRoute = inject(ActivatedRoute)
       this.master.doLoginMess(data).subscribe((resp)=>{
         console.log(resp);
         if(resp.response=='success' ){
-          localStorage.setItem('userId',resp.userId)
+          localStorage.setItem('userMid',resp.userId)
           this.router.navigate(['/mess/dash']);
         }
       });
@@ -68,7 +68,7 @@ route: ActivatedRoute = inject(ActivatedRoute)
       this.master.doLoginAdmin(data).subscribe((resp)=>{
         console.log(resp);
         if(resp.response=='success' ){
-          localStorage.setItem('userId',resp.userId)
+          localStorage.setItem('userAid',resp.userId)
           this.router.navigate(['/admin/dash']);
         }
       })

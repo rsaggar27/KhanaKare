@@ -22,7 +22,6 @@ router.post('/sign-up',(req,res)=>{
         if(err!=null)
         res.send(err.message);
         res.send({response:"Record Saved"});
-
     })
 });
 
