@@ -95,6 +95,17 @@ router.get("/:id", (req, resp) => {
     });
 });
 
+router.get("/mess-id/:id",(req,resp)=>{
+  let hostel=""
+  Student.findOne({ _id: req.params.id }).then((respJson)=>{
+    hostel=respJson.hostel;
+    Mess.findOne({hostel:hostel}).then((respJson2)=>{
+      resp.send({response:respJson2._id});
+    })
+  })
+  
+})
+
 router.put("/status/:id", (req, resp) => {
   Student.updateOne({ _id: req.params.id }, { status: req.body.status })
     .then((respJson) => {
@@ -128,4 +139,9 @@ router.put("/:id", (req, resp) => {
     });
 });
 
+
+
+
 module.exports = router;
+
+

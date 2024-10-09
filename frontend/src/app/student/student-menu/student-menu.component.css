@@ -1,0 +1,111 @@
+/* Container and layout */
+.container {
+    max-width: 1000px; /* Maximum width for larger screens */
+    
+  }
+  
+  /* Header styling */
+  .heading {
+    margin-bottom: 20px;
+  }
+  
+  .heading img {
+    width: 100%; /* Full width for the image */
+    max-width: 600px; /* Maximum width to maintain aspect ratio */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Table styling */
+  .table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    
+  }
+  
+  .table th {
+    background-color: #b85042;
+    color: #fff6ed;
+  }
+
+  .table td{
+    background-color: #fff6ed;
+  }
+
+  
+  table{
+    border:1px solid #000;
+  }
+
+  table th{
+    border: 1px solid #fff6ed;
+    
+  }
+
+  table td {
+    border: 1px solid #000;
+  }
+  
+  .table input[type="text"] {
+    background-color: #fff6ed;
+    border:0px;
+    box-shadow: 0 0 0 0;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    width:100%;
+    height: inherit;
+    
+  }
+  
+  /* Form control styling */
+  
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    /* Adjust container padding for smaller screens */
+    .container {
+      padding: 15px;
+    }
+  
+    /* Table font size adjustment */
+    .table th,
+    .table td {
+      font-size: 14px; /* Slightly smaller font size */
+      padding: 8px; /* Reduce padding for smaller screens */
+    }
+  
+    /* Button adjustment */
+    button {
+      width: 100%; /* Make button full-width on smaller screens */
+      padding: 12px; /* Increase padding for better touch targets */
+      font-size: 18px; /* Increase font size for visibility */
+    }
+  
+    /* Heading image adjustment */
+    .heading img {
+      max-width: 200px; /* Smaller image size on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .table th,
+    .table td {
+      font-size: 12px; /* Smaller font size for very small screens */
+      padding: 6px; /* Reduce padding */
+    }
+  
+    button {
+      font-size: 16px; /* Consistent font size on mobile */
+    }
+  }
+  

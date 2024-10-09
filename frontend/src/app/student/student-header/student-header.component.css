@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+nav {
+  background: #b85042;
+  /* box-shadow:0 0 0 1px gray ; */
+  /* height: 60px; */
+}
+.nav-it {
+  
+  float:left;
+
+  /* margin-left: 5px; */
+  height: 40px;
+
+  border-radius: 30px;
+  background-color: #b85042;
+  border-color: #fff6ed;
+  color: #fff6ed;
+}
+.nav-link{
+    font-family: "Open Sans", sans-serif;
+    color:#fff6ed !important;
+    
+}
+
