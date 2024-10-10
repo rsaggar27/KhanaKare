@@ -11,7 +11,7 @@ import { AdminMessFormComponent } from './admin/admin-mess-form/admin-mess-form.
 import { AdminStudentComponent } from './admin/admin-student/admin-student.component';
 import { AdminStudentFormComponent } from './admin/admin-student-form/admin-student-form.component';
 import { AdminDashComponent } from './admin/admin-dash/admin-dash.component';
-import { AdminHostelComponent } from './admin/admin-hostel/admin-hostel.component';
+// import { AdminHostelComponent } from './admin/admin-hostel/admin-hostel.component';
 
 import { MessFeedbackComponent } from './mess/mess-feedback/mess-feedback.component';
 import { MessMenuComponent } from './mess/mess-menu/mess-menu.component';
@@ -37,7 +37,7 @@ export const routes: Routes = [
     { path:'admin',component:AdminComponent,title:'Dashboard',
     children:[
         {path:'dash',component:AdminDashComponent,title:'Feedbacks'}, 
-        {path:'hostel',component:AdminHostelComponent,title:'Feedbacks'}, 
+        // {path:'hostel',component:AdminHostelComponent,title:'Feedbacks'}, 
         {path:'feedback',component:AdminFeedbackComponent,title:'Feedbacks'},
         { path:'hostel-form',component:AdminHostelFormComponent,title:'Add Hostel'}, 
         { path:'mess-form',component:AdminMessFormComponent,title:'Add Mess'}, 

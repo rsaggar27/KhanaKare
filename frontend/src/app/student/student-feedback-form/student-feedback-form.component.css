@@ -1,0 +1,21 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  div {
+    margin-bottom: 5px;
+  }
+  
+  small {
+    color: red;
+  }
+  
+  button {
+    margin-top: 15px;
+  }
+
+  .txt h1{
+    font-family: 'Vast Shadow', cursive;
+    font-size: 5rem;
+  }

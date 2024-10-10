@@ -11,4 +11,8 @@ export class StudentService {
   doGetMid(id:string){
     return this.http.get(this.url+"/student/mess-id/"+id);
   }
+
+  doAddFeedback(data:any){
+    return this.http.post(this.url+"/student/feedback/",data);
+  }
 }

@@ -5,6 +5,7 @@ const Mess =require("../models/mess");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
+const Feedback =require("../models/feedback")
 
 main().catch((err) => console.log(err));
 async function main() {
@@ -75,6 +76,23 @@ router.post("/login", (req, res) => {
   );
 });
 
+router.post("/feedback",(req,resp)=>{
+  let b=req.body;
+
+  let data={
+    sid:b.sid,
+    name:b.name,
+    feedback:b.feedback
+  }
+
+  let feedback=new Feedback(data)
+
+  feedback.save(data).then(()=>{
+    console.log("feedback saved")
+    resp.send({response:"Feedback saved"})
+  })
+})
+
 router.get("/", (req, resp) => {
   Student.find({})
     .then((respJson) => {
@@ -105,6 +123,8 @@ router.get("/mess-id/:id",(req,resp)=>{
   })
   
 })
+
+
 
 router.put("/status/:id", (req, resp) => {
   Student.updateOne({ _id: req.params.id }, { status: req.body.status })

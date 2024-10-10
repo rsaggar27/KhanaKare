@@ -1,9 +1,9 @@
+
+.txt h1{
+  font-family: 'Vast Shadow', cursive;
+  font-size: 5rem;
+}
 /* Container and layout */
-.container {
-    max-width: 1000px; /* Maximum width for larger screens */
-    
-  }
-  
   /* Header styling */
   .heading {
     margin-bottom: 20px;

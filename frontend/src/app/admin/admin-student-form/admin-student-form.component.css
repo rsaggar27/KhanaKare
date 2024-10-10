@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 .container {
     /* margin-top: 20px; */
     background:#fff6ed;
@@ -6,6 +6,10 @@
     min-width: 100vh;
 
 }
-.form-floating{
-    font-family: "Open Sans",sans-serif;
-}
+
+
+.txt h1{
+    font-family: 'Vast Shadow', cursive;
+    font-size: 5rem;
+  }
+

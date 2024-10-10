@@ -1,1 +1,47 @@
-<p>student-feedback-form works!</p>
+<div class="container py-5 ">
+    <div class="m-4 w-75 mx-auto">
+        <div class="txt text-center">
+            <h1>FEEDBACK</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../../../assets/compo.png" class="w-100 mx-auto" alt="Heading">
+            </div>
+            <div class="col-md-6">
+                <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+                    <div class="row pt-5">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtName" placeholder="Name"
+                                    formControlName="name">
+                                <label for="txtName">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtPhone" formControlName="sid"
+                                    placeholder="Password">
+                                <label for="txtPhone">Student Id</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" formControlName="feedback" id="txtFeedBack"
+                                    style="height: 200px"></textarea>
+                                <label for="txtFeedBack">FeedBack</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <button class="btn btn-danger" style="line-height: 2rem; width:10rem; border-radius: 50px;"
+                            type="submit">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
