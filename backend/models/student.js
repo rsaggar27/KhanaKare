@@ -12,7 +12,8 @@ const studentSchema =new Schema({
     hostel:{type:String,required:[true,"fill the hostel"]}, //combo
     mess:{type:String,required:[true,"fill the mess"]},  //combo
     ppic:{type:String,default:null},
-    status:{type:String,default:"Active"}
+    status:{type:String,default:"Active"},
+
 })
 
 module.exports=mongoose.model('Student',studentSchema);

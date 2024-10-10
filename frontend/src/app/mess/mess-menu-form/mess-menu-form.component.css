@@ -1,158 +1,140 @@
-
-.txt h1{
-  font-family: 'Vast Shadow', cursive;
+.txt h1 {
+  font-family: "Vast Shadow", cursive;
   font-size: 5rem;
 }
-/* Container and layout */
-  /* Header styling */
-  .heading {
-    margin-bottom: 20px;
+
+.heading img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.table th {
+  background-color: #b85042;
+  color: #fff6ed;
+}
+
+.table td {
+  background-color: #fff6ed;
+}
+
+table {
+  border: 1px solid #000;
+}
+
+table th {
+  border: 1px solid #fff6ed;
+}
+
+table td {
+  border: 1px solid #000;
+}
+
+.table input[type="text"] {
+  background-color: #fff6ed;
+  border: 0px;
+  box-shadow: 0 0 0 0;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: inherit;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #fff6ed;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  border-color: #495057;
+  box-shadow: 0 0 5px rgba(73, 80, 87, 0.1);
+}
+.btnn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnn p {
+  font-size: medium;
+  background: #fff6ed;
+}
+
+button {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: black;
+  color: #fff6ed;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: #b85042;
+
+  border: 1px solid #b85042;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
   }
-  
-  .heading img {
-    width: 100%; /* Full width for the image */
-    max-width: 600px; /* Maximum width to maintain aspect ratio */
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  /* Table styling */
-  .table {
-    width: 100%; /* Full width for the table */
-    border-collapse: collapse;
-  }
-  
+
+  /* Table font size adjustment */
   .table th,
   .table td {
-    text-align: center;
-    padding: 12px;
-    font-size: 16px;
-    
-  }
-  
-  .table th {
-    background-color: #b85042;
-    color: #fff6ed;
+    font-size: 14px; /* Slightly smaller font size */
+    padding: 8px; /* Reduce padding for smaller screens */
   }
 
-  .table td{
-    background-color: #fff6ed;
-  }
-
-  
-  table{
-    border:1px solid #000;
-  }
-
-  table th{
-    border: 1px solid #fff6ed;
-    
-  }
-
-  table td {
-    border: 1px solid #000;
-  }
-  
-  .table input[type="text"] {
-    background-color: #fff6ed;
-    border:0px;
-    box-shadow: 0 0 0 0;
-    border-radius: 4px;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer;
-    width:100%;
-    height: inherit;
-  }
-  
-  /* Form control styling */
-  .form-control {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #fff6ed;
-    border-radius: 4px;
-    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-control:focus {
-    border-color: #495057;
-    box-shadow: 0 0 5px rgba(73, 80, 87, 0.1);
-  }
-  .btnn{
-    display: flex;
-    justify-content: space-between;
-
-  }
-  
-  .btnn p{
-    font-size: medium;
-    background: #fff6ed;
-  }
-  
-  /* Button styling */
+  /* Button adjustment */
   button {
-    
-    /* margin-top: 20px; */
-    font-size: 16px;
-    font-weight: bold;
-    background-color: black;
-    color: #fff6ed;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    margin-right: 1rem;
+    width: 100%; /* Make button full-width on smaller screens */
+    padding: 12px; /* Increase padding for better touch targets */
+    font-size: 18px; /* Increase font size for visibility */
   }
-  
-  button:disabled {
-    background-color: #6c757d;
-    cursor: not-allowed;
+
+  /* Heading image adjustment */
+  .heading img {
+    max-width: 200px; /* Smaller image size on mobile */
   }
-  
-  button:not(:disabled):hover {
-    background-color: #b85042;
-    /* color:#000; */
-    border:1px solid #b85042;
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .table th,
+  .table td {
+    font-size: 12px; /* Smaller font size for very small screens */
+    padding: 6px; /* Reduce padding */
   }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    /* Adjust container padding for smaller screens */
-    .container {
-      padding: 15px;
-    }
-  
-    /* Table font size adjustment */
-    .table th,
-    .table td {
-      font-size: 14px; /* Slightly smaller font size */
-      padding: 8px; /* Reduce padding for smaller screens */
-    }
-  
-    /* Button adjustment */
-    button {
-      width: 100%; /* Make button full-width on smaller screens */
-      padding: 12px; /* Increase padding for better touch targets */
-      font-size: 18px; /* Increase font size for visibility */
-    }
-  
-    /* Heading image adjustment */
-    .heading img {
-      max-width: 200px; /* Smaller image size on mobile */
-    }
+
+  button {
+    font-size: 16px; /* Consistent font size on mobile */
   }
-  
-  @media (max-width: 480px) {
-    /* Further adjustments for very small screens */
-    .table th,
-    .table td {
-      font-size: 12px; /* Smaller font size for very small screens */
-      padding: 6px; /* Reduce padding */
-    }
-  
-    button {
-      font-size: 16px; /* Consistent font size on mobile */
-    }
-  }
-  
+}

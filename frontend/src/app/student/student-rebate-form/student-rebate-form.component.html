@@ -1,1 +1,69 @@
-<p>student-rebate-form works!</p>
+<div class="container">
+    <div class="txt text-center mt-5 pt-3">
+        <h1>Rebate Form</h1>
+    </div>
+    <div class="row mt-5">
+        <div class="img col-md-4 text-center">
+            <img src="../../../assets/rebate-element.png" alt="">
+        </div>
+        <div class="col-md-8">
+            <form action="" (ngSubmit)="onSubmit()" [formGroup]="rebateGroup">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtSid" placeholder="Sid" formControlName="sid">
+                            <label for="txtSid">SID</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control" [min]="minDate" id="txtDate" placeholder="Name"
+                                formControlName="fromDate">
+                            <label for="txtDate">From Date:</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" formControlName="fromTime" id="selFromTime"
+                                aria-label="Floating label select example">
+                                <option value="select" selected disabled>Select</option>
+                                <option value="BreakFast">BreakFast</option>
+                                <option value="Lunch">Lunch</option>
+                                <option value="Snacks">Snacks</option>
+                                <option value="Dinner">Dinner</option>
+                            </select>
+                            <label for="selFromTime">From Meal:</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control" [min]="minDate" id="txtToDate" placeholder="Name"
+                                formControlName="toDate">
+                            <label for="txtToDate">To Date:</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" formControlName="toTime" id="selToTime"
+                                aria-label="Floating label select example">
+                                <option value="select" selected disabled>Select</option>
+                                <option value="BreakFast">BreakFast</option>
+                                <option value="Lunch">Lunch</option>
+                                <option value="Snacks">Snacks</option>
+                                <option value="Dinner">Dinner</option>
+                            </select>
+                            <label for="selToTime">To Meal:</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary" style="float:right">Apply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

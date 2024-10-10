@@ -4,27 +4,27 @@
     </div>
 
     <div class="table container py-5">
-            <table class="table table-borderless">
-                <thead>
-                    <tr>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
                     <th></th>
                     <th>BreakFast</th>
                     <th>Lunch</th>
                     <th>Snacks</th>
                     <th>Dinner</th>
                 </tr>
-                </thead>
-                <tbody>
-                    @for (day of days; track $index) {
-                        <tr>
-                            <th>{{day}}</th>
-                            <td><input type="text" class="form-control" readonly id="{{'m'+$index+'0'}}"></td>
-                            <td><input type="text" class="form-control" readonly id="{{'m'+$index+'1'}}"></td>
-                            <td><input type="text" class="form-control" readonly id="{{'m'+$index+'2'}}"></td>
-                            <td><input type="text" class="form-control" readonly id="{{'m'+$index+'3'}}"></td>
-                        </tr>
-                    }
+            </thead>
+            <tbody>
+                @for (day of days; track $index) {
+                <tr>
+                    <th>{{day}}</th>
+                    <td><input type="text" class="form-control" readonly id="{{'m'+$index+'0'}}"></td>
+                    <td><input type="text" class="form-control" readonly id="{{'m'+$index+'1'}}"></td>
+                    <td><input type="text" class="form-control" readonly id="{{'m'+$index+'2'}}"></td>
+                    <td><input type="text" class="form-control" readonly id="{{'m'+$index+'3'}}"></td>
+                </tr>
+                }
             </tbody>
-            </table>
+        </table>
     </div>
 </div>
